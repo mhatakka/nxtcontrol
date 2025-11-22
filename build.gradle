@@ -1,0 +1,45 @@
+
+// Project-level build.gradle
+buildscript {
+    repositories {
+        google() // voi jättää
+        mavenCentral()
+        jcenter() // voi jättää
+        maven {
+            // allowInsecureProtocol= true
+            url "http://jcenter.bintray.com/"
+
+        } // HTTP
+        maven {
+            // allowInsecureProtocol= true
+            url "http://dl.google.com/dl/android/maven2/"
+        } // HTTP
+
+
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        // classpath 'com.android.tools.build:gradle:8.5.2'
+    }
+}
+
+
+allprojects {
+    repositories {
+
+        google() // voi jättää
+        mavenCentral()
+        jcenter() // voi jättää
+        maven {
+            // allowInsecureProtocol= true
+            url "http://jcenter.bintray.com/"
+        } // HTTP
+        maven {
+            // allowInsecureProtocol= true
+            url "http://dl.google.com/dl/android/maven2/"
+        } // HTTP
+    }
+}
+
+
