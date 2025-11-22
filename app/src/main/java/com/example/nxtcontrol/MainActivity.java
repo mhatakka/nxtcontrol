@@ -31,6 +31,11 @@ import java.util.Map;
 import android.widget.Button;
 import android.widget.EditText;
 
+// GUTHUB -token: nxtcontrol-terminal-pushpull-20251122
+
+
+// git remote set-url origin https://github.com/mhatakka/nxtcontrol.git
+
 public class MainActivity extends AppCompatActivity {
 
     private BluetoothAdapter btAdapter;
