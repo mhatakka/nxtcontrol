@@ -1,3 +1,5 @@
+READ ME
+
 Android Studio 3.2.1 project for lejOS LEGO NXT in Mac OSX 10.12 environment. 
 
 Application is used for controlling LEGO NXT Mindstorm 2.0 hub over Bluetooth (classic). LEGO LCP -protocol is used
