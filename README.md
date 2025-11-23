@@ -107,7 +107,7 @@ GITHUB Fine-Grained Token
   5. Send to cloud GitHub
      - 'git push'
   
- 1. File UPDATED on GitHub cloud: 'fetch' info and the use 'status' to show the un-committed files
+ File UPDATED on GitHub cloud: 'fetch' info and the use 'status' to show the un-committed files
     - 'git fetch'  gets the data but does NOT combine it/those to local branch
     -     remote: Enumerating objects: 8, done.
     -     remote: Counting objects: 100% (8/8), done.
@@ -129,8 +129,47 @@ GITHUB Fine-Grained Token
     -       --- a/README.md
     -        +++ b/README.md
     -        @@ -6,106 +6,95 @@ Appl ... etc
-    -   'git fetch origin'  For checking the changes. Loading the changes WITHOUT seeing/doing the merge
+    -   'git fetch origin'  For checking the changes. ('origin' is ALIAS for remote repo name.) Loading the changes WITHOUT seeing/doing the merge
     -    and then use 'git diff origin/main' to see the differences. NOTHING has changes.
     -   'git pull'   does fetch + merge. The file content is UPDATED!
 
+   Cloning the GitHub Repository
+   - 'git clone https://github.com/mhatakka/nxtcontrol.git' 
 
+   Meaning of 'origin'
+    - origin = https://github.com/mhatakka/nxtcontrol.git
+   - origin/main  == GitHub repo branch   
+   - main         == local repo branch
+   - 'git fetch'  reads data from ALL remote repos which have been configired (origin, upstream, backup)
+   - 'git fetch origin' reads ONLY from GitHub-repo
+
+  Meaning of 'upstream'
+  - upstream: "What is the remote branch, which is followed by the local branch?", "Where does this branch come, to what is it compared to?"
+  - Local branch: main
+  - Upstream brach: origin/main
+  - 'git branch --set-upstream-to=origin/main main'  git saves this (upstream)
+  - When 'upstream' is set:
+  - 'git status' shows if branch is "behind", "ahead"  or "diverged"
+  - 'git pull' knows where to get the changes
+  - 'git push' knows into which branch to send the changes
+
+    'Upstream' = Remote repo, from which the copy of a project (fork) has been done
+    - When copying the project of another user, your own remote (forked) project repo is still 'origin'
+    - The original (of another user) project repo  is 'upstream'
+    - 'git remote add upstream https://github.com/USERID/original-repo.git'  makes a 'path' to the original repo
+    - 'git fetch upstream'
+    -  'git merge upstream/main'
+
+    Simulation 'forking' project on local machine
+    - Create a project 'git_test' on  local machine and GitHub on 'git_test'-folder
+    - Create another folder 'fork_git_test' and move into that (cd ..; mkdir fork_gittest; cd for_git_test)
+    - Use 'git clone https://github.com/YOUR_USERNAME/git_test.git'
+    - Now you have two diffrent local repositories. Both pointing to same 'origin' (GitHub)
+    - NOTE! There might to appear very easily cases where
+    -     ! [rejected] main -> main (fetch first)
+    - SOLUTION:  use always 'git pull --rebase' before 'git push'
+
+    
+
+
+  
