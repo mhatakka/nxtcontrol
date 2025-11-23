@@ -108,6 +108,7 @@ GITHUB Fine-Grained Token
      - 'git push'
   
  File UPDATED on GitHub cloud: 'fetch' info and the use 'status' to show the un-committed files
+ 
     - 'git fetch'  gets the data but does NOT combine it/those to local branch
     -     remote: Enumerating objects: 8, done.
     -     remote: Counting objects: 100% (8/8), done.
@@ -115,22 +116,28 @@ GITHUB Fine-Grained Token
     -     remote: Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
     -     Unpacking objects: 100% (6/6), done.
     -     From https://github.com/mhatakka/nxtcontrol
+	
     - 'git status'   shows the status of the branch(es)
     -     On branch main
     -     Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
     -     (use "git pull" to update your local branch)
+	
     - 'git log ..origin/main --oneline' shows NEW commits on GitHUB repo
     -     a81d8c1 Update README.md again
     -     a4ea728 Update README.md
+	
     - 'git log origin/main.. --oneline' shows NEW commits on LOCAL repo (RESULT may be empty, use 'git status')
+	
     - 'git diff origin/main' show differences on files between GitHub and local repo
     -      diff --git a/README.md b/README.md
     -      index 8c436c6..5d2675d 100644
     -       --- a/README.md
     -        +++ b/README.md
     -        @@ -6,106 +6,95 @@ Appl ... etc
+	
     -   'git fetch origin'  For checking the changes. ('origin' is ALIAS for remote repo name.) Loading the changes WITHOUT seeing/doing the merge
     -    and then use 'git diff origin/main' to see the differences. NOTHING has changes.
+	
     -   'git pull'   does fetch + merge. The file content is UPDATED!
 
    Cloning the GitHub Repository
