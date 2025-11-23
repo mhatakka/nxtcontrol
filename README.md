@@ -82,12 +82,11 @@ GITHUB Fine-Grained Token
      - 'git status'
      - Result: Changes to be committed:
      -    (  use "git reset HEAD <file>..." to unstage)
-
-	-    new file:   <filename>
+     -    new file:   <filename>
 	
   4. Make a commit
      - 'git commit -m "Added a new file xxx"' write a commit message
-     - 
+
   5. Send to cloud GitHub
      - 'git push'  The new file is sent to GitHub
 
@@ -103,10 +102,9 @@ GITHUB Fine-Grained Token
      - 'git status'
      - GIT:  Changes to be committed:
      - (use "git reset HEAD <file>..." to unstage)
-
-	- modified:   <path>/example.txt
+     - modified:   <path>/example.txt
 	
-  6. Send to cloud GitHub
+  5. Send to cloud GitHub
      - 'git push'
   
  1. File UPDATED on GitHub cloud: fetch it (= pull)
